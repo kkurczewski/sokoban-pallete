@@ -1,0 +1,19 @@
+#pallete label[for=empty], .cell {
+    background-color: #ddd;
+}
+
+#pallete label[for=wall], .cell[data-type=wall] {
+    background-color: #abc;
+}
+
+#pallete label[for=box], .cell[data-type=box] {
+    background-color: #dba;
+}
+
+#pallete label[for=goal], .cell[data-type=goal] {
+    background-color: #fc0;
+}
+
+#pallete label[for=start], .cell[data-type=start] {
+    background-color: #3a0;
+}

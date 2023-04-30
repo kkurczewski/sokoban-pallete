@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    gap: 10px;
+}
+
+label::after {
+    content: attr(for);
+    text-transform: capitalize;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+#options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#options #download {
+    flex-grow: 1;
+    text-align: right;
+}
+
+#root:not(:has(.cell[data-type=start])) #options #download {
+    pointer-events: none;
+    color: gray;
+}
+
+#options, #hint {
+    padding: 3px 5px;
+}
+
+#pallete {
+    display: grid;
+    grid-column: 2;
+}
+
+:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+#pallete label {
+    grid-column: 2;
+    color: #3337;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 4px;
+    padding: 2px 3px;
+    margin: 3px;
+}

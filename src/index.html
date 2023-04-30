@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="./pallete/style.css" />
+    <script src="./pallete/controls.js"></script>
+    <script src="./scripts/updateTable.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <div id="options">
+            <label>
+                Rows:
+                <input id="rows" value=10 type="number" min="5" max="80">
+            </label>
+            <label>
+                Columns:
+                <input id="cols" value=15 type="number" min="5" max="80">
+            </label>
+            <a id="download"></a>
+        </div>
+        <table id="grid">
+            <script src="index.js"></script>
+        </table>
+        <p id="hint">Press [Ctrl] for brush mode, use ⮁ arrows to change tile</p>
+    </div>
+    <div id="pallete">
+        <input id="wall" name="tile" type="radio" data-symbol="#" checked="true">
+        <label for="wall"></label>
+
+        <input id="box" name="tile" type="radio" data-symbol="$">
+        <label for="box"></label>
+
+        <input id="goal" name="tile" type="radio" data-symbol=".">
+        <label for="goal"></label>
+
+        <input id="start" name="tile" type="radio" data-symbol="@" data-exclusive="true">
+        <label for="start"></label>
+
+        <input id="empty" name="tile" type="radio">
+        <label for="empty"></label>
+    </div>
+    <script src="./scripts/downloadLevel.js"></script>
+</body>
+
+</html>
